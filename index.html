@@ -47,7 +47,19 @@
 
 
 
+let testObject={
+    name:"akram",
+    list:[1,2,3,4],
+    testFunc:function(){
+        console.log(this.list);
 
+        //var myThis=this;
+        this.list.forEach(function(a){
+            console.log(this)
+        }.bind(this));
+    }
+};
+testObject.testFunc();
   </script>  
 </body>
 </html>
